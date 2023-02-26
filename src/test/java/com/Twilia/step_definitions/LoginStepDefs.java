@@ -1,11 +1,16 @@
-package com.AresAutomation.step_definitions;
+package com.Twilia.step_definitions;
 
-import com.AresAutomation.pages.LoginPage;
-import com.AresAutomation.utilities.ConfigurationReader;
-import io.cucumber.java.en.Given;
+import com.Twilia.pages.LoginPage;
+import com.Twilia.utilities.ConfigurationReader;
+import io.cucumber.java.en.*;
 public class LoginStepDefs {
 
 //>>>>>WE NEED TO CHANGE THIS PAGE, ACCORD WITH OUR FEATURE <<<<<<<<<
+
+    @Then("click on {string} module")
+    public void click_on_module(String modules) {
+
+    }
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
         System.out.println("Login to app in Before method");

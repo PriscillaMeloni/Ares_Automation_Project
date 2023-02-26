@@ -1,11 +1,11 @@
-package com.AresAutomation.step_definitions;
+package com.Twilia.step_definitions;
 
 
 
 
-import com.AresAutomation.utilities.BrowserUtils;
-import com.AresAutomation.utilities.ConfigurationReader;
-import com.AresAutomation.utilities.Driver;
+import com.Twilia.utilities.BrowserUtils;
+import com.Twilia.utilities.ConfigurationReader;
+import com.Twilia.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;

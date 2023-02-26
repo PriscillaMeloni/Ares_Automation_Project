@@ -1,11 +1,14 @@
-package com.AresAutomation.pages;
+package com.Twilia.pages;
 
 
-import com.AresAutomation.utilities.Driver;
+import com.Twilia.utilities.Driver;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class LoginPage {
 
@@ -13,14 +16,14 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    //>>>>>>>>>WE NEED TO CHANGE THIS PAGE, THE LOCATORS<<<<<<<<<<<
-    @FindBy(id="prependedInput")
+    // It is updated already!!!
+    @FindBy(xpath = "//input[@id='login']")
     public WebElement userName;
 
-    @FindBy(id="prependedInput2")
+    @FindBy(xpath = "//input[@id='password']")
     public WebElement password;
 
-    @FindBy(name = "_submit")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement submit;
 
 
@@ -29,6 +32,10 @@ public class LoginPage {
         password.sendKeys(passwordStr);
         submit.click();
         // verification that we logged
+    }
+
+    public static List ListOfModules(){
+        List<WebElement> listOfModules = Driver.getDriver().findElements(By.xpath("//a))
     }
 
 }

@@ -1,7 +1,7 @@
-package com.AresAutomation.pages;
+package com.Twilia.pages;
 
-import com.AresAutomation.utilities.BrowserUtils;
-import com.AresAutomation.utilities.Driver;
+import com.Twilia.utilities.BrowserUtils;
+import com.Twilia.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -18,24 +18,23 @@ public abstract class BasePage {
 
     //>>>>>WE NEED TO CHANGE THIS PAGE FOR OUR PROJECT <<<<<<<<<<<<<<
 
-    @FindBy(css = "span.title-level-1")
+    @FindBy(xpath = "//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder']")
     public List<WebElement> menuOptions;
 
-    @FindBy(css = "div[class='loader-mask shown']")
-    @CacheLookup
-    protected WebElement loaderMask;
 
-    @FindBy(css = "h1[class='oro-subtitle']")
-    public WebElement pageSubTitle;
+   //insert all modules locators here
+    @FindBy(xpath = "//span[normalize-space()='Discuss']")
+    public WebElement discussModule;
 
-    @FindBy(css = "#user-menu > a")
-    public WebElement userName;
+    @FindBy(xpath = "//span[normalize-space()='Calendar']")
+    public WebElement calendarModule;
 
-    @FindBy(linkText = "Logout")
-    public WebElement logOutLink;
+    @FindBy(xpath = "//span[normalize-space()='Notes']")
+    public WebElement notesModule;
 
-    @FindBy(linkText = "My User")
-    public WebElement myUser;
+    @FindBy(xpath = "//span[normalize-space()='Contacts']")
+    public WebElement contactModule;
+
 
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -45,12 +44,16 @@ public abstract class BasePage {
     /**
      * @return page name, for example: Dashboard
      */
+    /*
     public String getPageSubTitle() {
         //ant time we are verifying page name, or page subtitle, loader mask appears
         waitUntilLoaderScreenDisappear();
 //        BrowserUtils.waitForStaleElement(pageSubTitle);
         return pageSubTitle.getText();
     }
+
+     */
+
 
 
     /**
@@ -61,7 +64,7 @@ public abstract class BasePage {
     public void waitUntilLoaderScreenDisappear() {
         try {
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.invisibilityOf(loaderMask));
+          //  wait.until(ExpectedConditions.invisibilityOf(loaderMask));
         } catch (Exception e) {
             e.printStackTrace();
         }
