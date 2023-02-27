@@ -11,7 +11,7 @@ Feature: Users should be able to login
 
   @wip
 Scenario: Verify module functionality
-  Then click on "<module>" module
+  Then click on all the modules
 
 
 
