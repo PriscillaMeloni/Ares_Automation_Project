@@ -1,4 +1,4 @@
-package com.Twilia.utilities;
+package com.twilia.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;

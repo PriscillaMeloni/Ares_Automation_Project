@@ -1,4 +1,4 @@
-package com.Twilia.runners;
+package com.twilia.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features",
-        glue = "com/Twilia/step_definitions",
+        glue = "com/twilia/step_definitions",
         dryRun = false,
         tags = "",
         publish = true //generating a report with public link

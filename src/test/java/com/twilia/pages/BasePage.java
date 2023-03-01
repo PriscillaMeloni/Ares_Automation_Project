@@ -1,14 +1,12 @@
-package com.Twilia.pages;
+package com.twilia.pages;
 
-import com.Twilia.utilities.BrowserUtils;
-import com.Twilia.utilities.Driver;
+import com.twilia.utilities.BrowserUtils;
+import com.twilia.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -34,6 +32,44 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//span[normalize-space()='Contacts']")
     public WebElement contactModule;
+
+    @FindBy(xpath = "//span[normalize-space()='CRM']")
+    public WebElement crmModule;
+
+    @FindBy(xpath = "//span[normalize-space()='Sales']")
+    public WebElement salesModule;
+
+    @FindBy(xpath = "//span[normalize-space()='Website']")
+    public WebElement websiteModule;
+
+    @FindBy(xpath = "//span[normalize-space()='Point of Sale']")
+    public WebElement pointOfSaleModule;
+
+    @FindBy(xpath = "//span[normalize-space()='Purchases']")
+    public WebElement purchasesModule;
+    @FindBy(xpath = "//span[normalize-space()='Inventory']")
+    public WebElement inventoryModule;
+    @FindBy(xpath = "//span[normalize-space()='Manufacturing']")
+    public WebElement manufacturingModule;
+
+    @FindBy(xpath = "//span[normalize-space()='Repais']")
+    public WebElement repairsModule;
+
+    @FindBy(xpath = "//span[normalize-space()='Project']")
+    public WebElement ProjectModule;
+    @FindBy(xpath = "//span[normalize-space()='Events']") //a[@class='oe_menu_toggler']//span[@class='oe_menu_text'][normalize-space()='Events']
+    public WebElement eventsModule;
+    @FindBy(xpath = "//span[normalize-space()='Surveys']")
+    public WebElement surveysModule;
+    /*
+    @FindBy(xpath = "//span[normalize-space()='Contacts']")
+   // public WebElement contactModule;
+    @FindBy(xpath = "//span[normalize-space()='Contacts']")
+   // public WebElement contactModule;
+    @FindBy(xpath = "//span[normalize-space()='Contacts']")
+   // public WebElement contactModule;
+
+     */
 
 
     public BasePage() {

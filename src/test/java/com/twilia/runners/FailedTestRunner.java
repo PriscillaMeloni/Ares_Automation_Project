@@ -1,4 +1,4 @@
-package com.Twilia.runners;
+package com.twilia.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "@target/rerun.txt",
-        glue = "com/Twilia/step_definitions"
+        glue = "com/twilia/step_definitions"
 )
 public class FailedTestRunner {
 }

@@ -1,11 +1,11 @@
-package com.Twilia.step_definitions;
+package com.twilia.step_definitions;
 
 
 
 
-import com.Twilia.utilities.BrowserUtils;
-import com.Twilia.utilities.ConfigurationReader;
-import com.Twilia.utilities.Driver;
+import com.twilia.utilities.BrowserUtils;
+import com.twilia.utilities.ConfigurationReader;
+import com.twilia.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -39,19 +39,12 @@ public class Hooks {
      */
     @After
     public void teardownMethod(Scenario scenario){
-
         if (scenario.isFailed()) {
-
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
-
         }
-
-
-
         BrowserUtils.sleep(2);
         Driver.closeDriver();
-
     }
 
     //@BeforeStep

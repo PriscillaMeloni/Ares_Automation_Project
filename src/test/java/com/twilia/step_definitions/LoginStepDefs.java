@@ -1,8 +1,7 @@
-package com.Twilia.step_definitions;
+package com.twilia.step_definitions;
 
-import com.Twilia.pages.LoginPage;
-import com.Twilia.utilities.BrowserUtils;
-import com.Twilia.utilities.ConfigurationReader;
+import com.twilia.pages.LoginPage;
+import com.twilia.utilities.BrowserUtils;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
 

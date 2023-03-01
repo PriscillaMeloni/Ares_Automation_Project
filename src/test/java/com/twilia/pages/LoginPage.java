@@ -1,8 +1,8 @@
-package com.Twilia.pages;
+package com.twilia.pages;
 
 
-import com.Twilia.utilities.ConfigurationReader;
-import com.Twilia.utilities.Driver;
+import com.twilia.utilities.ConfigurationReader;
+import com.twilia.utilities.Driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoginPage {
+public class LoginPage extends BasePage{
 
     public LoginPage(){
         PageFactory.initElements(Driver.getDriver(), this);
