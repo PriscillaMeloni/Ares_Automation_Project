@@ -3,7 +3,7 @@ Feature: Default
 	#US:
 	#
 	#As a POS manager I should be able to access the main module
-  @B28G7-228
+  @B28G7-228 @Erum
   Scenario: US03AC01TC01 -Verify the POS manager can access the main module
     Given POS manager is on the login page page.
     When POS enters username and password and login.
