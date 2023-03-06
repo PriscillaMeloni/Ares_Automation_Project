@@ -14,7 +14,6 @@ import java.util.List;
 
 public abstract class BasePage {
 
-    //>>>>>WE NEED TO CHANGE THIS PAGE FOR OUR PROJECT <<<<<<<<<<<<<<
 
     @FindBy(xpath = "//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder']")
     public List<WebElement> menuOptions;
@@ -61,15 +60,7 @@ public abstract class BasePage {
     public WebElement eventsModule;
     @FindBy(xpath = "//span[normalize-space()='Surveys']")
     public WebElement surveysModule;
-    /*
-    @FindBy(xpath = "//span[normalize-space()='Contacts']")
-   // public WebElement contactModule;
-    @FindBy(xpath = "//span[normalize-space()='Contacts']")
-   // public WebElement contactModule;
-    @FindBy(xpath = "//span[normalize-space()='Contacts']")
-   // public WebElement contactModule;
 
-     */
 
 
     public BasePage() {

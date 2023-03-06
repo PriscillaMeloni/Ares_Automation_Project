@@ -35,12 +35,11 @@ public class LoginPage extends BasePage{
         userName.sendKeys(ConfigurationReader.getProperty(userNameStr));
         password.sendKeys(ConfigurationReader.getProperty(passwordStr));
         submit.click();
-
         // verification that we logged
     }
 
     public List<WebElement> ListOfModules(){
-        int a = 1;
+
         List<WebElement> list2 = new ArrayList<>();
         for (int i = 1; i < 23; i++) {
             WebElement listOfModule = Driver.getDriver().findElement(By.xpath("(//a)[" + i +"]"));
