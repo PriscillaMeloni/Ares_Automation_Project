@@ -136,6 +136,8 @@ public abstract class BasePage {
 //            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath(moduleLocator)));
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
         }
+
+
     }
 
 }
