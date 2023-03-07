@@ -40,9 +40,9 @@ public class LoginPage extends BasePage{
     }
 
     public List<WebElement> ListOfModules(){
-        int a = 1;
+
         List<WebElement> list2 = new ArrayList<>();
-        for (int i = 1; i < 23; i++) {
+        for (int i = 1; i < 13; i++) {
             WebElement listOfModule = Driver.getDriver().findElement(By.xpath("(//a)[" + i +"]"));
         list2.add(listOfModule);
         }
