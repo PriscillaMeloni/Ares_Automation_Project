@@ -62,7 +62,7 @@ public class US07_Stepdefs {
         }
         System.out.println("titleText = " + titleText);
         //System.out.println(titleText.size());
-       // System.out.println(expectedTitle.size());
+        System.out.println(expectedTitle.size());
 
         for(int i = 0,j = 0 ; i < expectedTitle.size() ; i++,j++){
 
