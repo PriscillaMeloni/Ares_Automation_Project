@@ -8,6 +8,7 @@ import com.twilia.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -21,8 +22,8 @@ public class US02StepDefs {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         BrowserUtils.waitFor(2);
 
-     //   Driver.getDriver().manage().window().setSize(new Dimension(1920,1080));
-       // BrowserUtils.waitFor(2);
+        Driver.getDriver().manage().window().setSize(new Dimension(1920,1080));
+        // BrowserUtils.waitFor(2);
 
     }
 
@@ -43,20 +44,36 @@ public class US02StepDefs {
         System.out.println(actualModule);
         for (WebElement each : inventoryManagerPage.listOfModulesAsElement()) {
             BrowserUtils.waitFor(2);
-            if(each.getText().equals("Website") || each.getText().equals("Lunch")){
+            if (each.getText().equals("Website") || each.getText().equals("Lunch")) {
                 continue;
-            }else{
+            } else {
                 each.click();
 
             }
         }
 
-       Assert.assertTrue(actualModule.containsAll(expectedModule));
-
-        }
-
+        Assert.assertTrue(actualModule.containsAll(expectedModule));
 
     }
+
+
+    @Then("user able to click all the {string}")
+    public void user_able_to_click_all_the(String expectedModule) {
+        List<String> actualModule = inventoryManagerPage.listOfModulesAsString();
+        for (WebElement each : inventoryManagerPage.listOfModulesAsElement()) {
+
+            if (each.getText().equals(expectedModule)) {
+                BrowserUtils.waitFor(1);
+                each.click();
+                BrowserUtils.waitFor(1);
+
+            }
+
+        }
+        Assert.assertTrue(actualModule.contains(expectedModule));
+
+    }
+}
 
 
 

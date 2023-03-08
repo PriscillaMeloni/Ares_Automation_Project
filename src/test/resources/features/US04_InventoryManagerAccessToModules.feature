@@ -8,11 +8,14 @@ Feature: Default
 	#
 	#Verify the Inventory managers access to 16 modules.
   @B28G7-236
-  Scenario: US04AC01TC01
+  Scenario Outline: US04AC01TC01
     Given user is on the login page
     Then user enters correct username, password and login
     Then user land on inbox, should see text "Congratulations, your inbox is empty"
-    And user able to click all the module
+    And user able to click all the "<module>"
+    Examples:
+
+      | module        |
       | Discuss       |
       | Calendar      |
       | Notes         |
@@ -27,6 +30,5 @@ Feature: Default
       | Leaves        |
       | Expenses      |
       | Lunch         |
-      | More          |
-
-
+      | Maintenance   |
+      | Dashboards    |
