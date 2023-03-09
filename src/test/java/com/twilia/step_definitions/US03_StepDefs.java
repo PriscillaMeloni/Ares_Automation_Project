@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
@@ -34,6 +35,7 @@ public class US03_StepDefs {
 
     @Then("POS manager clicks on each module.")
     public void pos_manager_clicks_on_each_module(List<String> expectedTitle) {
+        Driver.getDriver().manage().window().setSize(new Dimension(1800, 1100));
             List<String> titleText=new ArrayList<>();
             for (WebElement element : pointOfSalePage.eachModule()) {
                 BrowserUtils.sleep(3);
