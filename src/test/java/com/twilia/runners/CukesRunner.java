@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/twilia/step_definitions",
         dryRun = false,
-        tags = "@B28G7-221",
+        tags = "@B28G7-233", "@B28G7-221",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
