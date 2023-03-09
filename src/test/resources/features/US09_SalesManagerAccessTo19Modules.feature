@@ -12,9 +12,6 @@ Feature: Default
 	# * Verify the sales managers access to 19 modules. 
   @B28G7-221
   Scenario: US09AC01TC01 - Verify, sales manager can access 19 different modules
-
-
-
     Then user can see nineteenth different modules
       | Discuss         |
       | Calendar        |

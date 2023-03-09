@@ -15,7 +15,8 @@ public class Driver {
     We make the WebDriver private, because we want to close access from outside the class.
     We are making it static, because we will use it in a static method.
      */
-    //private static WebDriver driver; // default value = null
+    //private static WebDriver driver; >>> INSTANCE of the WebDriver // default value = null
+    //static webDriver drievr INSTANCE pq queremos run isso antes de qquer coisa
 
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
@@ -23,9 +24,13 @@ public class Driver {
     Create a re-usable utility method which will return the same driver instance once we call it.
     - If an instance doesn't exist, it will create first, and then it will always return same instance.
      */
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver(){ //static to call throught the class name,
+        //nao queremos criar objeto cada vez que chamamos esse metodo
+        //por isso colocamoms static pra chamar pela classe
 
-        if(driverPool.get() == null){
+        if(driverPool.get() == null){ //first time we are calling this getDriver it is NULL
+            //nos criamos a instance la en cima mas nao passamos nenhum valor pra ele
+            //por isso eh NULL...dai temos as opcoes abaixo como chrome e firefox
 
             /*
             We will read our browserType from configuration.properties file.
@@ -37,7 +42,7 @@ public class Driver {
             Depending on the browserType returned from the configuration.properties
             switch statement will determine the "case", and open the matching browser.
              */
-            switch (browserType){
+            switch (browserType){ //to set up the browser type
                 case "chrome":
                     //WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
@@ -70,7 +75,7 @@ public class Driver {
             /*
             We assign the value back to "null" so that my "singleton" can create a newer one if needed.
              */
-            driverPool.remove();
+            driverPool.remove(); //return to null value
         }
     }
 
