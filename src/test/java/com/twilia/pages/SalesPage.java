@@ -11,6 +11,12 @@ public class SalesPage extends BasePage{
 @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement salesManagerHomePage;
 
+
+
+
+
+
+
 //locate Quotation box
     @FindBy(xpath = "//th[@class='o_list_record_selector']")
     public WebElement quotationMainBox;
