@@ -51,7 +51,7 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[normalize-space()='Manufacturing']")
     public WebElement manufacturingModule;
 
-    @FindBy(xpath = "//span[normalize-space()='Repais']")
+    @FindBy(xpath = "//span[normalize-space()='Repairs']")
     public WebElement repairsModule;
 
     @FindBy(xpath = "//span[normalize-space()='Project']")
