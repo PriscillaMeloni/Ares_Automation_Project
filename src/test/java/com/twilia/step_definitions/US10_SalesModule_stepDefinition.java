@@ -3,9 +3,8 @@ package com.twilia.step_definitions;
 import com.twilia.pages.LoginPage;
 import com.twilia.pages.SalesPage;
 import io.cucumber.java.en.*;
-import org.junit.Assert;
 
-public class SalesModule_stepDefinition {
+public class US10_SalesModule_stepDefinition {
 
 LoginPage loginPage = new LoginPage();
     @Given("user is already logged in as a POSManager")
