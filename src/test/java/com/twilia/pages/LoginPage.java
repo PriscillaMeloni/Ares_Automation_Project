@@ -35,7 +35,6 @@ public class LoginPage extends BasePage{
         userName.sendKeys(ConfigurationReader.getProperty(userNameStr));
         password.sendKeys(ConfigurationReader.getProperty(passwordStr));
         submit.click();
-
         // verification that we logged
     }
 
