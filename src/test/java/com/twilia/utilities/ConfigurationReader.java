@@ -1,5 +1,9 @@
 package com.twilia.utilities;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebElement;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -26,6 +30,7 @@ public class ConfigurationReader {
             System.out.println("FILE NOT FOUND WITH GIVEN PATH!!!");
             e.printStackTrace();
         }
+
     }
 
     //create a utility method to use the object to read
