@@ -49,6 +49,8 @@ public class LoginStepDefs {
             robot.keyRelease(KeyEvent.VK_SUBTRACT);
             robot.keyRelease(KeyEvent.VK_CONTROL);
         }
+
+        BrowserUtils.sleep(2);
 /*
     @Given("the user logged in as {string}")
     public void the_user_logged_in_as(String userType) {
