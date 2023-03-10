@@ -25,6 +25,8 @@ public class LoginStepDefs {
         for (WebElement each : loginPage.ListOfModules()) {
             BrowserUtils.sleep(1);
             each.click();
+
+
            /* if (each.getText().equalsIgnoreCase("More")) {
                 each.click();
             } else {

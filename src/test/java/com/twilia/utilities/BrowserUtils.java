@@ -57,6 +57,8 @@ public class BrowserUtils {
         Assert.assertTrue(Driver.getDriver().getTitle().contains(expectedInTitle));
     }
 
+
+
     /*
     This method accepts WebElement target,
     and waits for that WebElement not to be displayed on the page
