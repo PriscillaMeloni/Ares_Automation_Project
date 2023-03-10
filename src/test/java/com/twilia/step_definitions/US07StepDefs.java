@@ -12,12 +12,10 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US07_Stepdefs {
+public class US07StepDefs {
 
     LoginPage loginPage = new LoginPage();
     List<WebElement> moduleList = new ArrayList<>();

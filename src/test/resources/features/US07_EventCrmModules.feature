@@ -1,4 +1,4 @@
-
+@regression
 
   @B28G7-233
   Feature:

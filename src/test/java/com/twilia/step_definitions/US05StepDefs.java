@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 import java.time.Duration;
 import java.util.List;
 
-public class US05AC01_StepDefinitions extends TwiliaHomePage{
+public class US05StepDefs extends TwiliaHomePage{
 
     @Given("User is logged on the Twilia page")
     public void user_is_logged_on_the_twilia_page() {

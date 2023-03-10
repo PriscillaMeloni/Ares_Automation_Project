@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US08_ExpensesManagerAccessTo12DifferentModules {
+public class US08StepDefs {
 
     LoginPage loginPage = new LoginPage();
 

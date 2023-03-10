@@ -1,4 +1,4 @@
-@B28G7-231
+@B28G7-231 @regression
 Feature: Default
   @B28G7-222 @sales
   Scenario: US10AC01TC01-Manager access and click on "Quotations" in Sales module

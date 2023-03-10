@@ -15,7 +15,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US03_StepDefs {
+public class US03StepDefs {
     PointOfSalePage pointOfSalePage=new PointOfSalePage();
     LoginPage loginPage=new LoginPage();
     @Given("POS manager is on the login page page.")
