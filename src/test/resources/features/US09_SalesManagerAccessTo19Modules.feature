@@ -1,5 +1,3 @@
-
-@regression
 Feature: Default
 
 

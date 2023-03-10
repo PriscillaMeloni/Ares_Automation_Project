@@ -17,10 +17,6 @@ public class SalesPage extends BasePage{
 
 
 
-
-
-
-
 //locate Quotation box
     @FindBy(xpath = "//table/thead/tr/th[1]")
     public WebElement quotationMainBox;
