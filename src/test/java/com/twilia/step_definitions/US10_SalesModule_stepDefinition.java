@@ -4,7 +4,7 @@ import com.twilia.pages.LoginPage;
 import com.twilia.pages.SalesPage;
 import io.cucumber.java.en.*;
 
-public class SalesModule_stepDefinition {
+public class US10_SalesModule_stepDefinition {
 
 LoginPage loginPage = new LoginPage();
     @Given("user is already logged in as a POSManager")
@@ -20,11 +20,10 @@ LoginPage loginPage = new LoginPage();
     public void user_can_click_on_main_quotation_box() {
 
         salesPage.quotationMainBox.click();
-
     }
     @Then("user should see all the checkboxes are selected")
     public void user_should_see_all_the_checkboxes_are_selected() {
-        salesPage.allQuotationBoxes.isSelected();
+        salesPage.assertCheckBoxesSelected();
     }
 
     @Given("user is already logged in as a SalesManager")
