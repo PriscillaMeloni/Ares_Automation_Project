@@ -10,6 +10,7 @@ Feature: smoke
     Then user should click on Sales module
 
   Scenario: Sales manager can access 19 different modules
+    Given user is on the TwilliaERP sales manager homepage
     Then user can see nineteenth different modules
       | Discuss         |
       | Calendar        |
@@ -33,6 +34,8 @@ Feature: smoke
 
 
   Scenario: POS manager can access the main module
+    Given POS manager is on the login page page.
+    When POS enters username and password and login.
     Then  POS manager clicks on each module.
       | #Inbox        |
       | Meetings      |
@@ -58,6 +61,7 @@ Feature: smoke
       | Dashboard     |
 
   Scenario: Expenses managers access to 12 modules.
+    Given User logged in as ExpensesManager
     Then User can see twelve different modules
       | Discuss         |
       | Calendar        |
